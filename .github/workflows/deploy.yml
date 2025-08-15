@@ -19,7 +19,7 @@ jobs:
           node-version: 20
       - name: Install deps
         run: npm ci
-      - name: Build (next export)
+      - name: Build (static export via output: export)
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
