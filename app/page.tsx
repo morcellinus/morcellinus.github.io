@@ -1,4 +1,4 @@
-import { Card } from "@/components/Card";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -11,10 +11,29 @@ export default function HomePage() {
           <b> LLM × Graphs</b>, and <b>agentic reasoning</b>.
         </p>
       </div>
-      <div className="grid sm:grid-cols-2 gap-4">
-        <Card title="Research" desc="Publications, projects, and interests" href="/research" />
-        <Card title="Achievements" desc="Awards, talks, internships, services" href="/achievements" />
-        <Card title="About" desc="Bio, contact, and CV" href="/about" />
+      <div className="flex flex-col sm:flex-row gap-6 items-start">
+        <div className="shrink-0">
+          <Image
+            src="/profile.jpg"
+            alt="Jinmo Lee"
+            width={160}
+            height={160}
+            className="rounded-full border"
+          />
+        </div>
+        <div className="space-y-2">
+          <p>
+            My current interests include Graph Neural Networks, LLM × Graphs, and agentic reasoning systems.
+          </p>
+          <div className="mt-3">
+            <div className="text-sm text-neutral-700">
+              Email: <a className="underline" href="mailto:jinmo@kaist.ac.kr">jinmo@kaist.ac.kr</a>
+            </div>
+            <div className="text-sm text-neutral-700">
+              Advisor: <a className="underline" href="https://dai.kaist.ac.kr/" target="_blank">Prof. Jaemin Yoo (dai.kaist.ac.kr)</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
