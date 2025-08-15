@@ -4,11 +4,11 @@ export default function HomePage() {
   return (
     <section className="space-y-6">
       <div>
-        <h1 className="text-3xl font-semibold tracking-tight">Hi, I’m Jinmo Lee <img src="/chelsea.png" alt="Chelsea FC" className="h-7 w-7 object-contain" /></h1>
+        <h1 className="text-3xl font-semibold tracking-tight">Hi, I’m Jinmo Lee 😎</h1>
         <p className="mt-3 text-neutral-1200 max-w-2xl">
           PhD student at KAIST School of Electrical Engineering (25.08-), advised by Prof. Jaemin Yoo.
         </p>
-        <ul className="list-none pl-0">
+        <ul className="mt-2 list-none pl-0">
           <li className="flex items-start text-sm">
             <span className="mr-2"></span>
             B.S. in Statistics, Sunkyunkwan University (<i>Summa Cum Laude</i>, GPA : 4.38/4.50)
@@ -20,6 +20,9 @@ export default function HomePage() {
         </ul>
         <p className="mt-2">
           Previously worked at KB Kookmin Card (22.11-23.07) and NH Investments & Securities (23.08-25.07) as a data scientist.
+        </p>
+        <p className="mt-2">
+          My current research interests include Graph Neural Networks and Utilizing Graphs on LLMs.
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-6 items-center">
@@ -33,9 +36,6 @@ export default function HomePage() {
           />
         </div>
         <div className="space-y-4">
-          <div>
-            <p className="font-medium">My current research interests include GNNs and LLM × Graphs</p>
-          </div>
           <div className="text-sm text-neutral-700">
             <b>Email:</b> <a className="underline" href="mailto:jml2529@kaist.ac.kr">jml2529@kaist.ac.kr</a>
           </div>
