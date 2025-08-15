@@ -9,12 +9,21 @@ const tabs = [
   { href: "/cv", label: "CV" },
 ];
 
+function normalize(path?: string) {
+  if (!path) return "/";
+  // remove all trailing slashes except root
+  const p = path.replace(/\/+$/, "");
+  return p === "" ? "/" : p;
+}
+
 export function NavBar() {
   const pathname = usePathname();
+  const current = normalize(pathname || "/");
+
   return (
     <nav className="flex gap-5 text-sm">
       {tabs.map((t) => {
-        const active = pathname === t.href;
+        const active = current === normalize(t.href);
         return (
           <Link
             key={t.href}
