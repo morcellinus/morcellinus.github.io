@@ -19,7 +19,7 @@ export function NavBar() {
           <Link
             key={t.href}
             href={t.href}
-            className={`transition duration-200 ${
+            className={`px-2 py-1 rounded transition duration-200 ${
               active ? "font-semibold underline text-white" : "text-blue-100"
             } hover:text-white hover:underline`}
           >
