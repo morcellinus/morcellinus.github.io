@@ -5,10 +5,16 @@ export default function HomePage() {
     <section className="space-y-6">
       <div>
         <h1 className="text-3xl font-semibold tracking-tight">Hi, I’m Jinmo Lee 👋</h1>
-        <p className="mt-3 text-neutral-700 max-w-2xl">
-          Currently a PhD student at <b>KAIST School of Electrical Engineering (25.08-)</b>, advised by <b>Prof. Jaemin Yoo</b>. <br />
-          B.S. in Statistics, Sunkyunkwan University (Summa Cum Laude, GPA : 4.38/4.50) <br />
-          M.S. in Applied Artificial Intelligence, advised by Prof. Eunil Park (GPA: 4.30/4.50) <br />
+        <p className="mt-3 text-neutral-1200 max-w-2xl">
+          Currently a PhD student at <b>KAIST School of Electrical Engineering (25.08-)</b>, advised by <b>Prof. Jaemin Yoo</b>.
+        </p>
+        <p>
+          B.S. in Statistics, Sunkyunkwan University (Summa Cum Laude, GPA : 4.38/4.50)
+        </p>
+        <p>
+          M.S. in Applied Artificial Intelligence, advised by Prof. Eunil Park (GPA: 4.30/4.50)
+        </p>
+        <p>
           Previously worked at KB Kookmin Card (22.11-23.07) and NH Investments & Securities (23.08-25.07) as a data scientist.
         </p>
       </div>
