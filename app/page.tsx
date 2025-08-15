@@ -6,17 +6,10 @@ export default function HomePage() {
       <div>
         <h1 className="text-3xl font-semibold tracking-tight">Hi, I’m Jinmo Lee 👋</h1>
         <p className="mt-3 text-neutral-700 max-w-2xl">
-          Currently a PhD student at <b>KAIST School of Electrical Engineering (25.08-)</b>, advised by
-          <b> Prof. Jaemin Yoo</b>.
-        </p>
-        <p>
-          | B.S. in Statistics, Sunkyunkwan University (Summa Cum Laude, GPA : 4.38/4.50)
-        </p>
-        <p>
-          | M.S. in Applied Artificial Intelligence, advised by <b> Prof. Eunil Park</b> (GPA: 4.30/4.50)
-        </p>
-        <p className="mt-3 text-neutral-700 max-w-2xl">
-          Previously worked at KB Kookmin Card (22.11-23.07) and NH Investments&Securities (23.08-25.07) as a data scientiest.
+          Currently a PhD student at <b>KAIST School of Electrical Engineering (25.08-)</b>, advised by <b>Prof. Jaemin Yoo</b>.{" "}
+          B.S. in Statistics, Sunkyunkwan University (Summa Cum Laude, GPA : 4.38/4.50),{" "}
+          M.S. in Applied Artificial Intelligence, advised by Prof. Eunil Park (GPA: 4.30/4.50).{" "}
+          Previously worked at KB Kookmin Card (22.11-23.07) and NH Investments & Securities (23.08-25.07) as a data scientist.
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-6 items-start">
@@ -29,25 +22,26 @@ export default function HomePage() {
             className="rounded-full border"
           />
         </div>
-        <div className="space-y-15">
-          <p>
-            My current interests include:
-            <li>Graph Neural Networks</li>
-            <li>LLM × Graphs</li>
-            <li>Graph-based MLLM</li>
-          </p>
-          <div className="mt-3">
-            <div className="text-sm text-neutral-700">
-              Email: <a className="underline" href="mailto:jml2529@kaist.ac.kr">jml2529@kaist.ac.kr</a>
-            </div>
-            <div className="text-sm text-neutral-700">
-              Advisor: <a className="underline" href="https://dai.kaist.ac.kr/" target="_blank">Prof. Jaemin Yoo (dai.kaist.ac.kr)</a>
-            </div>
-            <div className="text-sm text-neutral-700">
-              SNS: <a className="underline" href="https://www.linkedin.com/in/jinmo-lee-3b5115253/" target="_blank">LinkedIn</a>, <a className="underline" href="https://scholar.google.com/citations?user=t15sD98AAAAJ&hl=en" target="_blank">GoogleScholar</a>
-            </div>
+        <div className="space-y-4">
+          <div>
+            <p className="font-medium">My current interests include:</p>
+            <ul className="list-disc ml-5">
+              <li>Graph Neural Networks</li>
+              <li>LLM × Graphs</li>
+              <li>Graph-based MLLM</li>
+            </ul>
           </div>
-          <p>
+          <div className="text-sm text-neutral-700">
+            Email: <a className="underline" href="mailto:jml2529@kaist.ac.kr">jml2529@kaist.ac.kr</a>
+          </div>
+          <div className="text-sm text-neutral-700">
+            Advisor: <a className="underline" href="https://dai.kaist.ac.kr/" target="_blank">Prof. Jaemin Yoo (dai.kaist.ac.kr)</a>
+          </div>
+          <div className="text-sm text-neutral-700">
+            SNS: <a className="underline" href="https://www.linkedin.com/in/jinmo-lee-3b5115253/" target="_blank">LinkedIn</a>,{" "}
+            <a className="underline" href="https://scholar.google.com/citations?user=t15sD98AAAAJ&hl=en" target="_blank">GoogleScholar</a>
+          </div>
+          <p className="text-neutral-700">
             For inquiries about research collaborations or exchanges, feel free to email me.
           </p>
         </div>
