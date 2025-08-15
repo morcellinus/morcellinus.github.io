@@ -19,10 +19,9 @@ export function NavBar() {
           <Link
             key={t.href}
             href={t.href}
-            className={
-              "transition hover:opacity-80 " +
-              (active ? "font-semibold underline" : "text-neutral-600")
-            }
+            className={`transition duration-200 ${
+              active ? "font-semibold underline text-black" : "text-neutral-600"
+            } hover:text-black hover:underline`}
           >
             {t.label}
           </Link>
