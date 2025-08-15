@@ -20,8 +20,8 @@ export function NavBar() {
             key={t.href}
             href={t.href}
             className={`transition duration-200 ${
-              active ? "font-semibold underline text-black" : "text-neutral-600"
-            } hover:text-black hover:underline`}
+              active ? "font-semibold underline text-white" : "text-blue-100"
+            } hover:text-white hover:underline`}
           >
             {t.label}
           </Link>
