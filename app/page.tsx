@@ -6,15 +6,15 @@ export default function HomePage() {
       <div>
         <h1 className="text-3xl font-semibold tracking-tight">Hi, I’m Jinmo Lee 👋</h1>
         <p className="mt-3 text-neutral-1200 max-w-2xl">
-          Currently a PhD student at KAIST School of Electrical Engineering (25.08-), advised by <b>Prof. Jaemin Yoo</b>.
+          PhD student at KAIST School of Electrical Engineering (25.08-), advised by Prof. Jaemin Yoo.
         </p>
         <ul className="list-none pl-0">
           <li className="flex items-start text-sm">
-            <span className="mr-2">🎓</span>
+            <span className="mr-2"></span>
             B.S. in Statistics, Sunkyunkwan University (Summa Cum Laude, GPA : 4.38/4.50)
           </li>
           <li className="flex items-start text-sm mt-1">
-            <span className="mr-2">🎓</span>
+            <span className="mr-2"></span>
             M.S. in Applied Artificial Intelligence, advised by Prof. Eunil Park (GPA: 4.30/4.50)
           </li>
         </ul>
