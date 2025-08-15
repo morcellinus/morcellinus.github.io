@@ -2,9 +2,10 @@ export default function AchievementsPage() {
   return (
     <section className="space-y-6">
       <h1 className="section-title">Achievements</h1>
+
       <div>
         <h2 className="font-semibold">Awards</h2>
-        <ul className="space-y-3">
+        <ul className="mt-3 space-y-3">
           <li className="border rounded-xl p-4">
             <div className="font-medium">2nd Place — [Daishin Investments&Securities AI ESG Competition], 2022</div>
             <div className="text-sm text-neutral-600">Multilingual BERT fine-tuning modeling for automatic classification of ESG press releases.</div>

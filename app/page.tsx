@@ -6,9 +6,9 @@ export default function HomePage() {
       <div>
         <h1 className="text-3xl font-semibold tracking-tight">Hi, I’m Jinmo Lee 👋</h1>
         <p className="mt-3 text-neutral-700 max-w-2xl">
-          Currently a PhD student at <b>KAIST School of Electrical Engineering (25.08-)</b>, advised by <b>Prof. Jaemin Yoo</b>.{" "}
-          B.S. in Statistics, Sunkyunkwan University (Summa Cum Laude, GPA : 4.38/4.50),{" "}
-          M.S. in Applied Artificial Intelligence, advised by Prof. Eunil Park (GPA: 4.30/4.50).{" "}
+          Currently a PhD student at <b>KAIST School of Electrical Engineering (25.08-)</b>, advised by <b>Prof. Jaemin Yoo</b>. <br />
+          B.S. in Statistics, Sunkyunkwan University (Summa Cum Laude, GPA : 4.38/4.50) <br />
+          M.S. in Applied Artificial Intelligence, advised by Prof. Eunil Park (GPA: 4.30/4.50) <br />
           Previously worked at KB Kookmin Card (22.11-23.07) and NH Investments & Securities (23.08-25.07) as a data scientist.
         </p>
       </div>
@@ -24,7 +24,7 @@ export default function HomePage() {
         </div>
         <div className="space-y-4">
           <div>
-            <p className="font-medium">My current interests include:</p>
+            <p className="font-medium">My current research interests include:</p>
             <ul className="list-disc ml-5">
               <li>Graph Neural Networks</li>
               <li>LLM × Graphs</li>
@@ -32,13 +32,13 @@ export default function HomePage() {
             </ul>
           </div>
           <div className="text-sm text-neutral-700">
-            Email: <a className="underline" href="mailto:jml2529@kaist.ac.kr">jml2529@kaist.ac.kr</a>
+            <b>Email:</b> <a className="underline" href="mailto:jml2529@kaist.ac.kr">jml2529@kaist.ac.kr</a>
           </div>
           <div className="text-sm text-neutral-700">
-            Advisor: <a className="underline" href="https://dai.kaist.ac.kr/" target="_blank">Prof. Jaemin Yoo (dai.kaist.ac.kr)</a>
+            <b>Advisor:</b> <a className="underline" href="https://dai.kaist.ac.kr/" target="_blank">Prof. Jaemin Yoo (dai.kaist.ac.kr)</a>
           </div>
           <div className="text-sm text-neutral-700">
-            SNS: <a className="underline" href="https://www.linkedin.com/in/jinmo-lee-3b5115253/" target="_blank">LinkedIn</a>,{" "}
+            <b>SNS:</b> <a className="underline" href="https://www.linkedin.com/in/jinmo-lee-3b5115253/" target="_blank">LinkedIn</a>,{" "}
             <a className="underline" href="https://scholar.google.com/citations?user=t15sD98AAAAJ&hl=en" target="_blank">GoogleScholar</a>
           </div>
           <p className="text-neutral-700">
