@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="bg-[#003478]">
           <div className="max-w-5xl mx-auto px-5 py-5 flex items-center justify-between">
-            <Link href="/" className="text-lg font-bold tracking-tight text-white hover:opacity-80 transition">Jinmo Lee</Link>
+            <Link href="/" className="text-lg font-bold tracking-tight text-white hover:opacity-80 transition">morcellinus</Link>
             <NavBar />
           </div>
         </header>
