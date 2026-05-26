@@ -5,8 +5,8 @@ import { Footer } from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Jinmo Lee | KAIST EE PhD Student",
-  description: "Research website of Jinmo Lee (KAIST EE, advised by Prof. Jaemin Yoo)",
+  title: "Jinmo Lee | SNU CSE PhD Student",
+  description: "Research website of Jinmo Lee (SNU CSE, advised by Prof. Jaemin Yoo)",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
