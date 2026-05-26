@@ -11,6 +11,7 @@ export default function CVPage() {
       >
         Download CV (PDF)
       </a>
+      <p className="text-sm text-neutral-500">Last updated CV is served from the site public assets.</p>
     </section>
   );
 }

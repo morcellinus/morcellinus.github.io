@@ -20,17 +20,24 @@ export default function AboutPage() {
             advised by <b>Prof. Jaemin Yoo</b>.
           </p>
           <p>
-            My current interests include Graph Neural Networks, LLM × Graphs, and agentic reasoning systems.
+            My current interests include graph neural networks, heterogeneous graphs, and
+            graph-enhanced LLM systems.
           </p>
           <div className="mt-3">
             <div className="text-sm text-neutral-700">
-              Email: <a className="underline" href="mailto:jinmo@kaist.ac.kr">jinmo@kaist.ac.kr</a>
+              Email:{" "}
+              <a className="underline" href="mailto:jml2529@kaist.ac.kr">
+                jml2529@kaist.ac.kr
+              </a>
             </div>
             <div className="text-sm text-neutral-700">
-              Advisor: <a className="underline" href="https://dai.kaist.ac.kr/" target="_blank">Prof. Jaemin Yoo (dai.kaist.ac.kr)</a>
+              Advisor:{" "}
+              <a className="underline" href="https://dai.kaist.ac.kr/" target="_blank" rel="noreferrer">
+                Prof. Jaemin Yoo
+              </a>
             </div>
             <div className="text-sm text-neutral-700">
-              CV: <a className="underline" href="/cv.pdf">Download (placeholder)</a>
+              CV: <a className="underline" href="/CV-jinmolee.pdf">Download PDF</a>
             </div>
           </div>
         </div>
