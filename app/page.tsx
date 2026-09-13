@@ -6,24 +6,28 @@ export default function HomePage() {
       <div>
         <h1 className="text-3xl font-semibold tracking-tight">Hi, I’m Jinmo Lee 😎</h1>
         <p className="mt-3 max-w-3xl text-neutral-800">
-          PhD student at Seoul National University Department of Computer Science and Engineering
-          (25.08-), advised by Prof. Jaemin Yoo.
+          I’m a Founding Research Scientist at NUMS AI, where I have been building a frontier
+          tabular foundation model since August 2026. I’m also a PhD student in Computer Science
+          and Engineering at Seoul National University (since March 2026), advised by Prof. Jaemin Yoo.
         </p>
         <ul className="mt-4 space-y-2 pl-0 text-sm text-neutral-700">
           <li>
-            B.S. in Statistics, Sungkyunkwan University (<i>Summa Cum Laude</i>, GPA: 4.38/4.50)
+            B.S. in Statistics, Sungkyunkwan University (<i>Summa Cum Laude</i>, GPA: 4.39/4.50)
           </li>
           <li>
-            M.S. in Applied Artificial Intelligence, advised by Prof. Eunil Park (GPA: 4.30/4.50)
+            M.S. in Applied Artificial Intelligence, Sungkyunkwan University, advised by Prof. Eunil Park (GPA: 4.28/4.50)
           </li>
         </ul>
         <p className="mt-4 max-w-3xl text-neutral-800">
-          Previously worked as a data scientist at KB Kookmin Card (Nov 2022 to Jul 2023) and NH
-          Investment & Securities (Aug 2023 to Jul 2025).
+          Previously, I worked as a data scientist at NH Investment & Securities (August 2023 to
+          August 2025) and KB Kookmin Card (October 2022 to July 2023), applying data analysis and
+          machine learning to decision making.
         </p>
         <p className="mt-2 max-w-3xl text-neutral-800">
-          My current research interests include Heterogeneous Graphs and Tabular Foundation
-          Models.
+          My research focuses on relations and interactions in structured data, particularly
+          tabular foundation models and heterogeneous graphs. I study how these structures shape
+          representation learning and generalization, with the goal of developing principled,
+          computationally efficient methods for reliable and robust intelligent systems.
         </p>
       </div>
       <div className="flex flex-col items-center gap-6 rounded-2xl border border-neutral-200 bg-neutral-50 p-6 sm:flex-row sm:items-start">
@@ -39,6 +43,10 @@ export default function HomePage() {
         <div className="space-y-4">
           <div className="text-sm text-neutral-700">
             <b>Email:</b>{" "}
+            <a className="underline" href="mailto:jinmo.lee@nums.world">
+              jinmo.lee@nums.world
+            </a>
+            {" / "}
             <a className="underline" href="mailto:jinmo.lee@snu.ac.kr">
               jinmo.lee@snu.ac.kr
             </a>

@@ -5,8 +5,8 @@ import { Footer } from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Jinmo Lee | SNU CSE PhD Student",
-  description: "Research website of Jinmo Lee (SNU CSE, advised by Prof. Jaemin Yoo)",
+  title: "Jinmo Lee | NUMS AI & SNU CSE",
+  description: "Jinmo Lee, Founding Research Scientist at NUMS AI and PhD student at SNU CSE, researching tabular foundation models and heterogeneous graphs.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 

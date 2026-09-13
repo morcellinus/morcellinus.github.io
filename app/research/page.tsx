@@ -5,9 +5,9 @@ export default function ResearchPage() {
       <div>
         <h2 className="font-semibold">Interests</h2>
         <ul className="list-disc ml-6 mt-2 text-neutral-700 space-y-1">
-          <li>Graph Neural Networks (GNNs), Heterogeneous Graphs</li>
-          <li>LLM × Graphs for training, fine-tuning, post-training, and inference</li>
           <li>Tabular Foundation Models</li>
+          <li>Heterogeneous Graphs and Relational Learning</li>
+          <li>Representation Learning and Generalization in Structured Data</li>
         </ul>
       </div>
 
@@ -16,9 +16,14 @@ export default function ResearchPage() {
         <ul className="mt-3 space-y-3">
           <li className="pt-2 text-sm font-semibold text-neutral-500">2026</li>
           <li className="border rounded-xl p-4">
-            <div className="font-medium">
+            <a
+              className="font-medium hover:underline"
+              href="https://arxiv.org/abs/2606.18677"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               [W1] Bounded Context Management for Tabular Foundation Models on Stream Learning
-            </div>
+            </a>
             <div className="text-sm text-neutral-600">
               <b>J Lee</b>, D Choi, M Choi, J Yoo. <i>ICML 2026 Workshop on Foundation Models for
               Structured Data</i> (Spotlight Oral, Top 5% of accepted submissions).
