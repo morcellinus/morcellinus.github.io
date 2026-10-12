@@ -1,67 +1,50 @@
+import { Fragment } from "react";
+import { publications } from "@/lib/profile";
+
 export default function ResearchPage() {
   return (
-    <section className="space-y-6">
+    <section className="space-y-8">
       <h1 className="section-title">Research</h1>
-      <div>
-        <h2 className="font-semibold">Interests</h2>
-        <ul className="list-disc ml-6 mt-2 text-neutral-700 space-y-1">
+      <section aria-labelledby="interests">
+        <h2 id="interests" className="subsection-title">Interests</h2>
+        <ul className="ml-5 mt-2 list-disc space-y-1 text-neutral-700">
           <li>Tabular Foundation Models</li>
           <li>Heterogeneous Graphs and Relational Learning</li>
           <li>Representation Learning and Generalization in Structured Data</li>
         </ul>
-      </div>
-
-      <div>
-        <h2 className="font-semibold">Publications</h2>
-        <ul className="mt-3 space-y-3">
-          <li className="pt-2 text-sm font-semibold text-neutral-500">2026</li>
-          <li className="border rounded-xl p-4">
-            <a
-              className="font-medium hover:underline"
-              href="https://arxiv.org/abs/2606.18677"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              [W1] Bounded Context Management for Tabular Foundation Models on Stream Learning
-            </a>
-            <div className="text-sm text-neutral-600">
-              <b>J Lee</b>, D Choi, M Choi, J Yoo. <i>ICML 2026 Workshop on Foundation Models for
-              Structured Data</i> (Spotlight Oral, Top 5% of accepted submissions).
-            </div>
-          </li>
-
-          <li className="pt-2 text-sm font-semibold text-neutral-500">2025</li>
-          <li className="border rounded-xl p-4">
-            <a
-              className="font-medium"
-              href="https://journalofbigdata.springeropen.com/articles/10.1186/s40537-025-01203-9"
-              target="_blank"
-              rel="noreferrer"
-            >
-              [J2] We know who wins: Graph-oriented approaches of passing networks for predictive
-              football match outcomes
-            </a>
-            <div className="text-sm text-neutral-600">
-              <b>J Lee</b>, E Park, AP del Pobil. <i>Journal of Big Data</i> 12(1), 147.
-            </div>
-          </li>
-
-          <li className="pt-2 text-sm font-semibold text-neutral-500">2023</li>
-          <li className="border rounded-xl p-4">
-            <a
-              className="font-medium"
-              href="https://www.sciencedirect.com/science/article/abs/pii/S0736585323000655"
-              target="_blank"
-              rel="noreferrer"
-            >
-              [J1] D-HRSP: Dataset of helpful reviews for service providers
-            </a>
-            <div className="text-sm text-neutral-600">
-              <b>J Lee</b>, E Park. <i>Telematics and Informatics</i> 82, 102001.
-            </div>
-          </li>
-        </ul>
-      </div>
+      </section>
+      <section aria-labelledby="publications">
+        <h2 id="publications" className="subsection-title">Publications</h2>
+        <div className="mt-4 space-y-6">
+          {[2026, 2025, 2023].map((year) => (
+            <section key={year} aria-labelledby={`year-${year}`}>
+              <h3 id={`year-${year}`} className="mb-3 font-bold text-neutral-500">{year}</h3>
+              <ul className="space-y-3">
+                {publications.filter((paper) => paper.year === year).map((paper) => (
+                  <li key={paper.id} className="content-card">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <span className="shrink-0 pt-0.5 text-sm font-semibold text-neutral-500">[{paper.id}]</span>
+                      <div className="min-w-0 space-y-1.5">
+                        <a className="text-link font-semibold leading-snug" href={paper.url} target="_blank" rel="noopener noreferrer">{paper.title}</a>
+                        <p className="text-sm text-neutral-700">
+                          {paper.authors.map((author, i) => (
+                            <Fragment key={author}>
+                              {i > 0 && ", "}
+                              {author === "Jinmo Lee" ? <strong>{author}</strong> : author}
+                            </Fragment>
+                          ))}.
+                        </p>
+                        <p className="text-sm text-neutral-600">{paper.venue}</p>
+                        {paper.note && <p className="text-sm font-medium text-[#003478]">{paper.note}</p>}
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      </section>
     </section>
   );
 }
