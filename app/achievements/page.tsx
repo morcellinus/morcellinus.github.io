@@ -1,38 +1,54 @@
+import { awards, talks, teaching } from "@/lib/profile";
+
 export default function AchievementsPage() {
   return (
-    <section className="space-y-6">
+    <section className="space-y-8">
       <h1 className="section-title">Achievements</h1>
-
-      <div>
-        <h2 className="font-semibold">Awards</h2>
+      <section aria-labelledby="awards">
+        <h2 id="awards" className="subsection-title">Honors and Awards</h2>
         <ul className="mt-3 space-y-3">
-          <li className="border rounded-xl p-4">
-            <div className="font-medium">2nd Place, Daishin Securities AI ESG Competition (2022)</div>
-            <div className="text-sm text-neutral-600">
-              Built a multilingual BERT fine-tuning pipeline for automatic classification of ESG
-              press releases.
-            </div>
-          </li>
-          <li className="border rounded-xl p-4">
-            <div className="font-medium">1st Place, NH Investment & Securities Big Data Competition (2021)</div>
-            <div className="text-sm text-neutral-600">
-              Designed and implemented an algorithm to map trending topics to relevant stocks.
-            </div>
-          </li>
-          <li className="border rounded-xl p-4">
-            <div className="font-medium">1st Place, KOPIS Big Data Competition (2021)</div>
-            <div className="text-sm text-neutral-600">
-              Conducted spatial statistical analysis of performance districts to support niche
-              genre revitalization.
-            </div>
-          </li>
+          {awards.map((award) => (
+            <li key={award.title} className="content-card">
+              <div className="dated-heading">
+                <h3 className="font-semibold">{award.title}</h3>
+                <span className="entry-date">{award.date}</span>
+              </div>
+              <p className="mt-1 text-sm text-neutral-600">{award.detail}</p>
+            </li>
+          ))}
         </ul>
-      </div>
-
-      <div>
-        <h2 className="font-semibold">Invited Talks</h2>
-        <p className="mt-2 text-sm text-neutral-600">No invited talks listed yet.</p>
-      </div>
+      </section>
+      <section aria-labelledby="talks">
+        <h2 id="talks" className="subsection-title">Talks and Presentations</h2>
+        <ul className="mt-3 space-y-3">
+          {talks.map((talk) => (
+            <li key={talk.event} className="content-card">
+              <div className="dated-heading">
+                <h3 className="font-semibold">{talk.event}</h3>
+                <span className="entry-date">{talk.date}</span>
+              </div>
+              <p className="mt-2">
+                {talk.url ? <a className="text-link" href={talk.url} target="_blank" rel="noopener noreferrer">{talk.title}</a> : talk.title}
+              </p>
+              <p className="mt-1 text-sm text-neutral-600">{talk.detail}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section aria-labelledby="teaching">
+        <h2 id="teaching" className="subsection-title">Teaching Assistantships</h2>
+        <ul className="mt-3 space-y-3">
+          {teaching.map((course) => (
+            <li key={course.code} className="content-card">
+              <div className="dated-heading">
+                <h3 className="font-semibold">{course.title}</h3>
+                <span className="entry-date">{course.date}</span>
+              </div>
+              <p className="mt-1 text-sm text-neutral-600">{course.institution} · {course.code}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </section>
   );
 }
