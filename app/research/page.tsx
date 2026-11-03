@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { publications } from "@/lib/profile";
 
+const years = [...new Set(publications.map(({ year }) => year))].sort((a, b) => b - a);
+
 export default function ResearchPage() {
   return (
     <section className="space-y-8">
@@ -16,16 +18,20 @@ export default function ResearchPage() {
       <section aria-labelledby="publications">
         <h2 id="publications" className="subsection-title">Publications</h2>
         <div className="mt-4 space-y-6">
-          {[2026, 2025, 2023].map((year) => (
+          {years.map((year) => (
             <section key={year} aria-labelledby={`year-${year}`}>
               <h3 id={`year-${year}`} className="mb-3 font-bold text-neutral-500">{year}</h3>
               <ul className="space-y-3">
                 {publications.filter((paper) => paper.year === year).map((paper) => (
-                  <li key={paper.id} className="content-card">
+                  <li key={paper.id} id={paper.id.toLowerCase()} className="content-card">
                     <div className="flex items-start gap-2 sm:gap-3">
                       <span className="shrink-0 pt-0.5 text-sm font-semibold text-neutral-500">[{paper.id}]</span>
                       <div className="min-w-0 space-y-1.5">
-                        <a className="text-link font-semibold leading-snug" href={paper.url} target="_blank" rel="noopener noreferrer">{paper.title}</a>
+                        {paper.url ? (
+                          <a className="text-link font-semibold leading-snug" href={paper.url} target="_blank" rel="noopener noreferrer">{paper.title}</a>
+                        ) : (
+                          <span className="font-semibold leading-snug">{paper.title}</span>
+                        )}
                         <p className="text-sm text-neutral-700">
                           {paper.authors.map((author, i) => (
                             <Fragment key={author}>

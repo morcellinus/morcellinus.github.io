@@ -47,7 +47,11 @@ export default function HomePage() {
         <ul className="mt-3 space-y-3">
           {publications.slice(0, 3).map((paper) => (
             <li key={paper.id} className="content-card">
-              <a className="text-link font-semibold" href={paper.url} target="_blank" rel="noopener noreferrer">{paper.title}</a>
+              {paper.url ? (
+                <a className="text-link font-semibold" href={paper.url} target="_blank" rel="noopener noreferrer">{paper.title}</a>
+              ) : (
+                <Link className="text-link font-semibold" href={`/research/#${paper.id.toLowerCase()}`}>{paper.title}</Link>
+              )}
               <p className="mt-1 text-sm text-neutral-600">{paper.venue}</p>
             </li>
           ))}
