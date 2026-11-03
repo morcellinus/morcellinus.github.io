@@ -1,5 +1,19 @@
 export const publications = [
   {
+    "id": "C1",
+    "year": 2027,
+    "title": "Beyond Homophily: Relation-wise Predictive Informativeness for Heterogeneous Graph Message Passing",
+    "authors": [
+      "Jinmo Lee",
+      "Doyun Choi",
+      "Minho Jeong",
+      "Jaemin Yoo"
+    ],
+    "venue": "WSDM 2027, Main Conference.",
+    "note": null,
+    "url": null
+  },
+  {
     "id": "P4",
     "year": 2026,
     "title": "Distillation of Tabular Foundation Models into Efficient Predictors",
