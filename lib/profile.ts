@@ -1,7 +1,8 @@
 export const publications = [
   {
     "id": "C1",
-    "year": 2027,
+    // Group by acceptance year; the venue keeps the conference year.
+    "year": 2026,
     "title": "Beyond Homophily: Relation-wise Predictive Informativeness for Heterogeneous Graph Message Passing",
     "authors": [
       "Jinmo Lee",
