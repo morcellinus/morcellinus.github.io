@@ -4,18 +4,37 @@
 
 :root { color-scheme: light; }
 html { min-height: 100%; }
-body { @apply min-h-screen bg-white text-neutral-900 antialiased; line-height: 1.65; }
+body { @apply flex min-h-screen flex-col bg-white text-neutral-900 antialiased; line-height: 1.65; }
 
 @layer components {
-  .site-container { @apply mx-auto w-full max-w-5xl px-4 sm:px-5; }
-  .section-title { @apply text-2xl font-bold tracking-tight sm:text-3xl; }
+  .site-container { @apply mx-auto w-full; max-width: 74rem; padding-inline: clamp(1rem, 3.5vw, 2.5rem); }
+  .site-main { @apply flex-1; padding-block: clamp(1.5rem, 4vw, 3.25rem); }
+  .page-stack { @apply flex flex-col; gap: clamp(1.5rem, 3.5vw, 2.75rem); }
+  .section-title { @apply font-bold leading-tight tracking-tight; font-size: clamp(1.5rem, 1.15rem + 1.45vw, 2.125rem); }
+  .home-title { font-size: clamp(1.875rem, 1.25rem + 2vw, 2.75rem); }
   .subsection-title { @apply text-lg font-bold; }
   .muted { @apply text-sm text-neutral-500; }
-  .content-card { @apply min-w-0 rounded-xl border border-neutral-200 p-4 sm:p-5; overflow-wrap: anywhere; }
+  .content-card { @apply min-w-0 rounded-xl border border-neutral-200; padding: clamp(0.875rem, 2vw, 1.25rem); overflow-wrap: anywhere; }
+  .intro-grid { @apply grid items-start; gap: clamp(1.5rem, 4vw, 3.5rem); }
+  .prose-column { @apply min-w-0; max-width: 68ch; }
+  .prose-column p { text-wrap: pretty; }
+  .profile-card { @apply grid min-w-0 items-start gap-4 bg-neutral-50; }
+  .profile-photo { @apply mx-auto aspect-square rounded-full border object-cover; width: clamp(6rem, 14vw, 9rem); }
+  .card-grid { @apply grid; gap: clamp(0.75rem, 1.75vw, 1.25rem); grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); }
+  .featured-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
   .text-link { @apply text-[#003478] underline-offset-4 hover:underline; }
   .contact-link { @apply inline-flex min-h-11 max-w-full items-center text-[#003478] underline underline-offset-4; overflow-wrap: anywhere; }
-  .dated-heading { @apply flex min-w-0 flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4; }
-  .entry-date { @apply shrink-0 text-sm font-bold text-neutral-600; }
+  .dated-heading { @apply flex min-w-0 flex-wrap items-baseline justify-between gap-x-4 gap-y-1; }
+  .dated-heading h3 { flex: 1 1 15rem; }
+  .entry-date { @apply text-sm font-bold text-neutral-600; }
+
+  @media (min-width: 36rem) and (max-width: 55.999rem) {
+    .profile-card { grid-template-columns: auto minmax(0, 1fr); }
+  }
+
+  @media (min-width: 56rem) {
+    .intro-grid { grid-template-columns: minmax(0, 1fr) clamp(15rem, 26vw, 19rem); }
+  }
 }
 
 main { overflow-wrap: anywhere; }

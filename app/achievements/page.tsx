@@ -2,11 +2,11 @@ import { awards, talks, teaching } from "@/lib/profile";
 
 export default function AchievementsPage() {
   return (
-    <section className="space-y-8">
+    <section className="page-stack">
       <h1 className="section-title">Achievements</h1>
       <section aria-labelledby="awards">
         <h2 id="awards" className="subsection-title">Honors and Awards</h2>
-        <ul className="mt-3 space-y-3">
+        <ul className="card-grid mt-3">
           {awards.map((award) => (
             <li key={award.title} className="content-card">
               <div className="dated-heading">
@@ -20,7 +20,7 @@ export default function AchievementsPage() {
       </section>
       <section aria-labelledby="talks">
         <h2 id="talks" className="subsection-title">Talks and Presentations</h2>
-        <ul className="mt-3 space-y-3">
+        <ul className="card-grid mt-3">
           {talks.map((talk) => (
             <li key={talk.event} className="content-card">
               <div className="dated-heading">
@@ -37,7 +37,7 @@ export default function AchievementsPage() {
       </section>
       <section aria-labelledby="teaching">
         <h2 id="teaching" className="subsection-title">Teaching Assistantships</h2>
-        <ul className="mt-3 space-y-3">
+        <ul className="card-grid mt-3">
           {teaching.map((course) => (
             <li key={course.code} className="content-card">
               <div className="dated-heading">

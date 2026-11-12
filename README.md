@@ -22,3 +22,11 @@ npm run dev
 - Update professional profile links in `components/ContactLinks.tsx`.
 - Shared mobile layouts and typography are in `app/globals.css`; navigation is in `components/NavBar.tsx`.
 - Add new tabs by creating `app/<route>/page.tsx` and linking it in `components/NavBar.tsx`.
+
+## Optional traffic analytics
+
+1. In [Umami Cloud](https://cloud.umami.is/), add `morcellinus.github.io` as a website and copy its Website ID from **Tracking code**.
+2. In this repository's **Settings → Secrets and variables → Actions → Variables**, add `NEXT_PUBLIC_UMAMI_WEBSITE_ID` with that Website ID. The ID is public; do not use an API key or account credential.
+3. Run **Deploy static site to Pages** from the **Actions** tab. Then visit the deployed site and check the Umami dashboard.
+
+The tracker is omitted if the variable is blank. It records traffic on `morcellinus.github.io`, excluding the page URL's query string and fragment. To disable it, remove the variable and redeploy.
