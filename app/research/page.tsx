@@ -5,7 +5,7 @@ const years = [...new Set(publications.map(({ year }) => year))].sort((a, b) => 
 
 export default function ResearchPage() {
   return (
-    <section className="space-y-8">
+    <section className="page-stack">
       <h1 className="section-title">Research</h1>
       <section aria-labelledby="interests">
         <h2 id="interests" className="subsection-title">Interests</h2>
@@ -21,7 +21,7 @@ export default function ResearchPage() {
           {years.map((year) => (
             <section key={year} aria-labelledby={`year-${year}`}>
               <h3 id={`year-${year}`} className="mb-3 font-bold text-neutral-500">{year}</h3>
-              <ul className="space-y-3">
+              <ul className="card-grid">
                 {publications.filter((paper) => paper.year === year).map((paper) => (
                   <li key={paper.id} id={paper.id.toLowerCase()} className="content-card">
                     <div className="flex items-start gap-2 sm:gap-3">
