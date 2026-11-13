@@ -1,7 +1,7 @@
 const links = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/jinmo-lee-3b5115253/" },
   { label: "GitHub", href: "https://github.com/morcellinus" },
-  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=t15sD98AAAAJ&hl=en" },
+  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=ouSJ7T4AAAAJ&hl=ko" },
   { label: "alphaXiv", href: "https://www.alphaxiv.org/@jinmo-lee" },
 ];
 
