@@ -2,10 +2,10 @@ import { Fragment } from "react";
 import { publications } from "@/lib/profile";
 
 const publicationGroups = [
-  { id: "preprint", label: "Preprint", prefixes: /^P/ },
+  { id: "technical-report", label: "Technical Report", prefixes: /^T/ },
   { id: "conference", label: "Conference", prefixes: /^[CW]/ },
   { id: "journal", label: "Journal", prefixes: /^J/ },
-  { id: "technical-report", label: "Technical Report", prefixes: /^T/ },
+  { id: "preprint", label: "Preprint", prefixes: /^P/ },
 ];
 
 function PublicationVenue({ id, venue }: { id: string; venue: string }) {
