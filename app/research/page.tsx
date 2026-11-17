@@ -48,9 +48,9 @@ export default function ResearchPage() {
                       <span className="shrink-0 pt-0.5 text-sm font-semibold text-neutral-500">[{paper.id}]</span>
                       <div className="min-w-0 space-y-1.5">
                         {paper.url ? (
-                          <a className="text-link font-semibold leading-snug" href={paper.url} target="_blank" rel="noopener noreferrer">{paper.title}</a>
+                          <a className="font-bold leading-snug text-black underline-offset-4 hover:underline focus-visible:underline" href={paper.url} target="_blank" rel="noopener noreferrer">{paper.title}</a>
                         ) : (
-                          <span className="font-semibold leading-snug">{paper.title}</span>
+                          <span className="font-bold leading-snug text-black">{paper.title}</span>
                         )}
                         <p className="text-sm text-neutral-700">
                           {paper.authors.map((author, i) => (
@@ -61,7 +61,7 @@ export default function ResearchPage() {
                           ))}.
                         </p>
                         <p className="text-sm text-neutral-600"><PublicationVenue id={paper.id} venue={paper.venue} /></p>
-                        {paper.note && <p className="text-sm font-medium text-[#003478]">{paper.note}</p>}
+                        {paper.note && <p className="text-sm font-semibold text-[#805900]">{paper.note}</p>}
                       </div>
                     </div>
                   </li>
