@@ -1,7 +1,11 @@
 import { Fragment } from "react";
 import { publications } from "@/lib/profile";
 
-const years = [...new Set(publications.map(({ year }) => year))].sort((a, b) => b - a);
+const publicationGroups = [
+  { id: "preprint", label: "Preprint", prefixes: /^[PT]/ },
+  { id: "conference", label: "Conference", prefixes: /^[CW]/ },
+  { id: "journal", label: "Journal", prefixes: /^J/ },
+];
 
 export default function ResearchPage() {
   return (
@@ -18,11 +22,11 @@ export default function ResearchPage() {
       <section aria-labelledby="publications">
         <h2 id="publications" className="subsection-title">Publications</h2>
         <div className="mt-4 space-y-6">
-          {years.map((year) => (
-            <section key={year} aria-labelledby={`year-${year}`}>
-              <h3 id={`year-${year}`} className="mb-3 font-bold text-neutral-500">{year}</h3>
-              <ul className="card-grid">
-                {publications.filter((paper) => paper.year === year).map((paper) => (
+          {publicationGroups.map(({ id, label, prefixes }) => (
+            <section key={id} aria-labelledby={id}>
+              <h3 id={id} className="mb-3 font-bold text-neutral-500">{label}</h3>
+              <ul className="grid grid-cols-1 gap-3 sm:gap-4">
+                {publications.filter((paper) => prefixes.test(paper.id)).map((paper) => (
                   <li key={paper.id} id={paper.id.toLowerCase()} className="content-card">
                     <div className="flex items-start gap-2 sm:gap-3">
                       <span className="shrink-0 pt-0.5 text-sm font-semibold text-neutral-500">[{paper.id}]</span>
@@ -34,23 +38,3 @@ export default function ResearchPage() {
                         )}
                         <p className="text-sm text-neutral-700">
                           {paper.authors.map((author, i) => (
-                            <Fragment key={author}>
-                              {i > 0 && ", "}
-                              {author === "Jinmo Lee" ? <strong>{author}</strong> : author}
-                            </Fragment>
-                          ))}.
-                        </p>
-                        <p className="text-sm text-neutral-600">{paper.venue}</p>
-                        {paper.note && <p className="text-sm font-medium text-[#003478]">{paper.note}</p>}
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
-        </div>
-      </section>
-    </section>
-  );
-}
