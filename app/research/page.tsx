@@ -38,3 +38,23 @@ export default function ResearchPage() {
                         )}
                         <p className="text-sm text-neutral-700">
                           {paper.authors.map((author, i) => (
+                            <Fragment key={author}>
+                              {i > 0 && ", "}
+                              {author === "Jinmo Lee" ? <strong>{author}</strong> : author}
+                            </Fragment>
+                          ))}.
+                        </p>
+                        <p className="text-sm text-neutral-600">{paper.venue}</p>
+                        {paper.note && <p className="text-sm font-medium text-[#003478]">{paper.note}</p>}
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      </section>
+    </section>
+  );
+}
